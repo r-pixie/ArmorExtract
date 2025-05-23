@@ -6,7 +6,7 @@ from utils.utils import Utils
 class ItemsAdder:
     def __init__(self):
         self.armors_rendering = {}
-        self.furnace_data = {"items": {}}
+        self.furnace_data = {}
         self.item_ids = Utils.load_yaml("ItemsAdder/storage/items_ids_cache.yml")
 
     def extract(self):
