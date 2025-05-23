@@ -55,4 +55,4 @@ class ItemsAdder:
             }
                 self.furnace_data.setdefault(material.lower(), []).append(entry)
 
-        Utils.save_json("output/itemsadder/furnace.json", self.furnace_data)
+        Utils.save_json("output/itemsadder/sprites.json", self.furnace_data)
