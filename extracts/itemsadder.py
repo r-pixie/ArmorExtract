@@ -48,11 +48,11 @@ class ItemsAdder:
                 os.makedirs(os.path.dirname(f"output/itemsadder/textures/models/{layer_rendering[layer]}.png"), exist_ok=True)
                 shutil.copy(file, f"output/itemsadder/textures/models/{layer_rendering[layer]}.png")
 
-                f"minecraft:{material}".lower(), {} = [
-                    {
-                        "custom_model_data": custom_model_data,
-                        "sprite": f"textures/models/{layer_rendering[layer]}",                       
-                    }
-                ]
+                entry = {
+                    "custom_model_data": 
+                int(custom_model_data),
+                    "sprite": f"textures/models/{layer_rendering[layer]}"
+            }
+                self.furnace_data.setdefault(material.lower(), []).append(entry)
 
         Utils.save_json("output/itemsadder/furnace.json", self.furnace_data)
